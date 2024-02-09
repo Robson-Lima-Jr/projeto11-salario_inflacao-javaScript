@@ -23,6 +23,7 @@ console.log(`2 - Listar o índice IPCA de 2010 à 2020`);
 console.log(`3 - Comparação entre o percentual de aumento salarial e o IPCA \n`);
 
 let menuQuestao = menu.question(`Digite o número referenta a informação desejada: `);
+console.log(`\n`);
 
 //condicional para execução
 if (Number(menuQuestao) == 1) {
@@ -31,7 +32,7 @@ if (Number(menuQuestao) == 1) {
         let valorAno = index.ano;
 
         console.log(`${`Ano: `.padEnd(30, "-")} ${valorAno}`);
-        console.log(`${`Salário Mínimo: `.padEnd(30, "-")} ${valorSalario.toFixed(2)}\n`);
+        console.log(`${`Salário Mínimo: `.padEnd(30, "-")} R$ ${valorSalario.toFixed(2).replace(".", ",")}\n`);
     }
 
 } else if (Number(menuQuestao) == 2) {
