@@ -1,0 +1,24 @@
+{
+  "name": "projeto11-salario_juros-javascript",
+  "version": "1.0.0",
+  "description": "Projeto [DevMedia](https://www.devmedia.com.br/) - 19ª Missão: Construa uma aplicação que compara Salário x Inflação",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robson-Lima-Jr/projeto11-salario_juros-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Robson-Lima-Jr/projeto11-salario_juros-javascript/issues"
+  },
+  "homepage": "https://github.com/Robson-Lima-Jr/projeto11-salario_juros-javascript#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
