@@ -31,14 +31,38 @@ if (Number(menuQuestao) == 1) {
         let valorSalario = index.salario;
         let valorAno = index.ano;
 
-        console.log(`${`Ano: `.padEnd(30, "-")} ${valorAno}`);
-        console.log(`${`Salário Mínimo: `.padEnd(30, "-")} R$ ${valorSalario.toFixed(2).replace(".", ",")}\n`);
+        console.log(`${`Ano: `.padEnd(40, "-")} ${valorAno}`);
+        console.log(`${`Salário Mínimo: `.padEnd(40, "-")} R$ ${valorSalario.toFixed(2).replace(".", ",")}\n`);
     }
 
 } else if (Number(menuQuestao) == 2) {
+    for (let index2 of valores_gerais) {
+        let valorIpca = index2.ipca;
+        let valorAno = index2.ano;
+
+        console.log(`${`Ano: `.padEnd(40, "-")} ${valorAno}`);
+        console.log(`${`Inflação IPCA: `.padEnd(40, "-")} ${valorIpca.toFixed(2).replace("." , ",")}%\n`);
+    }
     
 } else if (Number(menuQuestao) == 3) {
-    
+    for (let index3 = 0; index3 < valores_gerais.length; index3++) {
+        let valorAno = valores_gerais[index3].ano;
+        let valorSalario = valores_gerais[index3].salario;
+        let valorIcpa = valores_gerais[index3].ipca;
+
+        let crescimento = 0;
+
+        if (index3 > 0) {
+            let diferencaSalario = valores_gerais[index3].salario - valores_gerais[index3 - 1].salario;
+
+            crescimento = (diferencaSalario / valores_gerais[index3 -1].salario) * 100;
+        }
+
+        console.log(`${`Ano: `.padEnd(40, "-")} ${valorAno}`);
+        console.log(`${`Salário mínimo: `.padEnd(40, "-")} R$ ${valorSalario.toFixed(2).replace("." , ",")}`);
+        console.log(`${`Crescimento Salarial: `.padEnd(40, "-")} ${crescimento.toFixed(2).replace("." , ",")}%`);
+        console.log(`${`Inflação IPCA: `.padEnd(40, "-")} ${valorIcpa.toFixed(2).replace("." , ",")}%\n`);
+    }
 } else {
-    
+    console.log(`Opção Inválida!!`);
 }
