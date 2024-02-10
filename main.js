@@ -53,7 +53,7 @@ if (Number(menuQuestao) == 1) {
         let crescimento = 0;
 
         if (index3 > 0) {
-            let diferencaSalario = valores_gerais[index3].salario - valores_gerais[index3 - 1].salario;
+            let diferencaSalario = valorSalario - valores_gerais[index3 - 1].salario;
 
             crescimento = (diferencaSalario / valores_gerais[index3 -1].salario) * 100;
         }
